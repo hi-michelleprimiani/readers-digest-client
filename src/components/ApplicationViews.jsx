@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Register } from "../pages/Register"
 import { Authorized } from "./Authorized"
 import { Login } from "../pages/Login"
-import { Home } from "../pages/Home"
+import { BookList } from "./BookList"
 
 export const ApplicationViews = () => {
 
@@ -14,7 +14,11 @@ export const ApplicationViews = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route element={<Authorized/>}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<BookList />}>
+
+
+            </Route>
+
 
 
         </Route>
