@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { getAllBooks } from "../services/Books";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const BookList = () => {
   const [books, setBooks] = useState([]);
+  const navigate = useNavigate()
 
   useEffect(() => {
     getAllBooks().then((bookData) => {
@@ -25,6 +27,8 @@ export const BookList = () => {
                 backgroundColor: "#d9f7f7", // Pale blue background color
                 padding: "10px", // Add some padding for spacing
               }}
+              onClick={() => {
+                navigate(`/book/${book.id}`);}}
             >
               <div className="book-title text-2xl px-12 py-2">
                 {book.title}
