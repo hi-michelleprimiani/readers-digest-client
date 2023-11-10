@@ -15,7 +15,7 @@ export const NavBar = () => {
       <li className="navbar__item">
         <NavLink
           className="text-left underline text-blue-600 hover:text-purple-700"
-          to={"/create"}
+          to={"/book/create"}
         >
           Add a Book
         </NavLink>
