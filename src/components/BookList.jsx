@@ -20,20 +20,14 @@ export const BookList = () => {
           return (
             <div
               key={book.id}
-              className="books flex items-center basis-80 flex-wrap justify-center text-center"
-              style={{
-                border: "1px solid black", // Soft border
-                borderRadius: "10px", // Small border radius
-                backgroundColor: "#d9f7f7", // Pale blue background color
-                padding: "10px", // Add some padding for spacing
-              }}
+              className="book-card"
               onClick={() => {
                 navigate(`/book/${book.id}`);}}
             >
-              <div className="book-title text-2xl px-12 py-2">
+              <div className="book-title">
                 {book.title}
               </div>
-              <div className="book-author font-light">Author: {book.author}</div>
+              <div className="book-author">{book.author}</div>
               <img
                 className="book_img"
                 src={book.cover_image}
